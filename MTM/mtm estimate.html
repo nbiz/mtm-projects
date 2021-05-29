@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTM Estimate</title>
+</head>
+<body>
+    <!-- title -->
+    <h1 id="title">Estimate of Moving Services - Mike The Mover</h1>
+
+    <!-- description -->
+    <p id="description">62 Dawson Rd, Guelph. 519-882-0298.</p>
+
+    </br>
+
+    <!-- form START -->
+    <form id="survey-form">
+      <p>Client information:</p>
+      <!-- name -->
+      <div>
+        <label for="name" id="name-label">Client name:</label>
+        <input id="name" placeholder="John Doe" required>
+      </div>
+      
+      <!-- number -->
+      <div>
+        <label for="phone" id="phone-label">Phone number:</label>
+        <input type="number" id="phone" placeholder="555-123-4567" required>
+      </div>
+      
+      <!-- origin -->
+      <div>
+        <label for="origin" id="origin-label">Origin address:</label>
+        <input rows="5" cols="33" id="origin" placeholder="420 Gouda Place, Guelph ON">
+      </div>
+      
+      <!-- destination -->
+      <div>
+        <label for="destination" id="destination-label">Destination address:</label>
+        <input rows="5" cols="33" id="destination" placeholder="69 Starview Cres, Guelph ON">
+      </div>
+
+      </br>
+
+      <!-- service includes -->
+      <p>Service includes:</p>
+      <!-- team -->
+      <div>
+        <label for="team" id="team-label">Team:</label>
+        <select type="dropdown" id="team">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+      </div>
+
+      <!-- truck -->
+      <div>
+        <label for="truck" id="truck-label">Truck:</label>
+        <select type="dropdown" id="truck">
+          <option value="1">1 cube van</option>
+          <option value="2">1 straight truck (24 ft)</option>
+          <option value="3">1 straight truck (26 ft)</option>
+          <option value="4">1 straight truck (28 ft)</option>
+          <option value="5">2 straight trucks</option>
+          <option value="6">3 straight trucks</option>
+          <option value="7">4 straight trucks</option>
+          <option value="8">1 tractor trailer (53 ft)</option>
+          <option value="9">2 tractor trailers</option>
+      </div>
+
+      <!-- check boxes -->
+      <div>
+        <div>
+          <label for="Standard equipment">Standard equipment</label>
+          <input type="checkbox" id="Standard equipment" name="Standard equipment" value="Standard equipment">
+        </div>
+        <div>
+          <label for="Piano equipment">Piano equipment</label>
+          <input type="checkbox" id="Piano equipment" name="Piano equipment" value="Piano equipment">
+        </div>
+        <div>
+          <label for="Power-mate stair climber">Power-mate stair climber</label>
+          <input type="checkbox" id="Power-mate stair climber" name="Power-mate stair climber" value="Power-mate stair climber">
+        </div>
+      </div>
+      <!-- </div> -->
+
+      <!-- rate -->
+      <div>
+        <label for="rate" id="rate-label">Rate:</label>
+        <select type="rate" id="rate">
+          <option value="a">70</option>
+          <option value="b">80</option>
+          <option value="c">90</option>
+          <option value="d">140</option>
+          <option value="d">150</option>
+          <option value="d">180</option>
+          <option value="d">190</option>
+          <option value="d">210</option>
+          <option value="d">240</option>
+          <option value="d">250</option>
+          <option value="d">280</option>
+          <option value="d">290</option>
+          <option value="d">360</option>
+      </div>
+
+      <!-- day 1 (rate * hours = line1) -->
+      <!-- day 2 (rate * hours = line2) -->
+      <!-- day 3 (rate * hours = line3) -->
+      <!-- storage -->
+      <!-- FRP -->
+      <!-- miscelaneous charges -->
+      <!-- supplies -->
+      <!-- subtotal -->
+      <!-- HST -->
+      <!-- total -->
+
+      <!-- instructions -->
+
+      <!-- supplies list -->
+
+      <!-- move date(s) / time -->
+
+      <!-- fineprint -->
+
+      </br>
+      </br>
+      </br>
+      </br>
+
+      <div>
+        <label for="textbox">Here a text box:</label>
+        <textarea id="textbox" name="textbox" rows="5" cols="33">Example text inside..</textarea>
+      </div>
+      
+      <input type="submit" value="Send it" id="submit">
+    </form>
+</body>
+</html>
+
