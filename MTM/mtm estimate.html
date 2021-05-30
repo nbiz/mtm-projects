@@ -81,23 +81,6 @@
         </select>
       </div>
 
-      <!-- check boxes -->
-      <div>
-        <div>
-          <label for="Standard equipment">Standard equipment</label>
-          <input type="checkbox" id="Standard equipment" name="Standard equipment" value="Standard equipment">
-        </div>
-        <div>
-          <label for="Piano equipment">Piano equipment</label>
-          <input type="checkbox" id="Piano equipment" name="Piano equipment" value="Piano equipment">
-        </div>
-        <div>
-          <label for="Power-mate stair climber">Power-mate stair climber</label>
-          <input type="checkbox" id="Power-mate stair climber" name="Power-mate stair climber" value="Power-mate stair climber">
-        </div>
-      </div>
-      <!-- </div> -->
-
       <!-- rate -->
       <div>
         <label for="rate" id="rate-label">Rate:</label>
@@ -117,6 +100,41 @@
           <option value="d">360</option>
         </select>
       </div>
+
+      <!-- check boxes - equips -->
+      <div>
+        <p>Equipment:</p>
+        <div>
+          <label for="Standard equipment">Standard equipment</label>
+          <input type="checkbox" id="Standard equipment" name="Standard equipment" value="Standard equipment">
+        </div>
+        <div>
+          <label for="Piano equipment">Piano equipment</label>
+          <input type="checkbox" id="Piano equipment" name="Piano equipment" value="Piano equipment">
+        </div>
+        <div>
+          <label for="Power-mate stair climber">Power-mate stair climber</label>
+          <input type="checkbox" id="Power-mate stair climber" name="Power-mate stair climber" value="Power-mate stair climber">
+        </div>
+      </div>
+      
+      <!-- check boxes - reusable material -->
+      <div>
+        <p>Reusable mats:</p>
+        <div>
+          <label for="Medium mirror carton">Medium mirror carton</label>
+          <input type="checkbox" id="Medium mirror carton" name="Medium mirror carton" value="Medium mirror carton">
+        </div>
+        <div>
+          <label for="Large mirror carton">Large mirror carton</label>
+          <input type="checkbox" id="Large mirror carton" name="Large mirror carton" value="Large mirror carton">
+        </div>
+        <div>
+          <label for="Wardrobe cartons">Wardrobe cartons</label>
+          <input type="checkbox" id="Wardrobe cartons" name="Wardrobe cartons" value="Wardrobe cartons">
+        </div>
+      </div>
+
 
       <!-- day 1 (rate * hours = line1) -->
       <!-- day 2 (rate * hours = line2) -->
@@ -138,13 +156,10 @@
       <!-- fineprint -->
 
       </br>
-      </br>
-      </br>
-      </br>
 
       <div>
-        <label for="textbox">Here a text box:</label>
-        <textarea id="textbox" name="textbox" rows="5" cols="33">Example text inside..</textarea>
+        <label for="textbox">Notes:</label></br>
+        <textarea placeholder="Example note.." id="textbox" name="textbox" rows="5" cols="33"></textarea>
       </div>
       
       <input type="submit" value="Send it" id="submit">
