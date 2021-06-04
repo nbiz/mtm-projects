@@ -49,10 +49,10 @@
       <!-- team -->
       <div>
         <label for="team" id="team-label">Team:</label>
-        <select type="dropdown" id="team">
+        <select type="dropdown" selected="3" id="team">
           <option value="1">1</option>
           <option value="2">2</option>
-          <option value="3">3</option>
+          <option selected value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
           <option value="6">6</option>
@@ -68,10 +68,10 @@
       <!-- truck -->
       <div>
         <label for="truck" id="truck-label">Truck:</label>
-        <select type="dropdown" id="truck">
+        <select type="dropdown" selected="3" id="truck">
           <option value="1">1 cube van</option>
           <option value="2">1 straight truck (24 ft)</option>
-          <option value="3">1 straight truck (26 ft)</option>
+          <option selected value="3">1 straight truck (26 ft)</option>
           <option value="4">1 straight truck (28 ft)</option>
           <option value="5">2 straight trucks</option>
           <option value="6">3 straight trucks</option>
@@ -84,20 +84,20 @@
       <!-- rate -->
       <div>
         <label for="rate" id="rate-label">Rate:</label>
-        <select type="rate" id="rate">
-          <option value="a">70</option>
-          <option value="b">80</option>
-          <option value="c">90</option>
-          <option value="d">140</option>
-          <option value="d">150</option>
-          <option value="d">180</option>
-          <option value="d">190</option>
-          <option value="d">210</option>
-          <option value="d">240</option>
-          <option value="d">250</option>
-          <option value="d">280</option>
-          <option value="d">290</option>
-          <option value="d">360</option>
+        <select type="dropdown" selected="180" id="rate">
+          <option>70</option>
+          <option>80</option>
+          <option>90</option>
+          <option>140</option>
+          <option>150</option>
+          <option selected>180</option>
+          <option>190</option>
+          <option>210</option>
+          <option>240</option>
+          <option>250</option>
+          <option>280</option>
+          <option>290</option>
+          <option>360</option>
         </select>
       </div>
 
@@ -135,10 +135,49 @@
         </div>
       </div>
 
+      <!-- dispatch time / expected arrival time -->
+      <!-- 
+      3am   /    2nd colum with same options for arrival?
+      4am
+      5am
+      6am
+      630am
+      645am
+      7am
+      730am
+      8am
+      830am
+      9am
+      930am
+      10am
+      1030am
+      11am
+      1130am
+      12pm
+      12pm (variable 2nd job)
+      **add user input option? -->
+
+
+      <!-- estimated travel time (round trip) -->
+      <!-- user input "Km round trip" **todo: integrate googlemaps iframe-->
+
+      <!-- dispatch point (charges start & end here) -->
+      <!-- 
+      Guelph
+      KW
+      Cambridge
+      Flat rate -->
+
+      <!-- breaks/ time -->
+      <!-- 
+      set number & time?
+      perentage of total time? -->
+
 
       <!-- day 1 (rate * hours = line1) -->
       <!-- day 2 (rate * hours = line2) -->
       <!-- day 3 (rate * hours = line3) -->
+      <!-- day 4 (rate * hours = line4) **add #days user input option-->
       <!-- storage -->
       <!-- FRP -->
       <!-- miscelaneous charges -->
