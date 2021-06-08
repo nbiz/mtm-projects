@@ -17,6 +17,9 @@
 
     <!-- form START -->
     <form id="survey-form">
+
+      <!-- CLIENT INFO -->
+
       <p>Client information:</p>
       <!-- name -->
       <div>
@@ -29,7 +32,23 @@
         <label for="phone" id="phone-label">Phone number:</label>
         <input type="number" id="phone" placeholder="555-123-4567" required>
       </div>
+
+      <!-- company -->
+      <div>
+        <label for="company" id="company-label">Company:</label>
+        <input id="company" placeholder="N/A">
+      </div>
       
+      </br>
+
+      <!-- todo: split this into two pages, start of mini-crm;
+      popup or area for client info input ->  whole page tile view showing current
+      clients on the go. Contact info, + quick summary & dates etc-->
+
+      <!-- LOGISTICS -->
+
+      <!-- todo: additional pick-up & drop-off locations -->
+      <p>Logistics:</p>
       <!-- origin -->
       <div>
         <label for="origin" id="origin-label">Origin address:</label>
@@ -42,26 +61,92 @@
         <input rows="5" cols="33" id="destination" placeholder="69 Starview Cres, Guelph ON">
       </div>
 
-      </br>
+      <!-- dispatch time / expected arrival time -->
+      <div>
+        <label for="dispatch" id="dispatch-label">Dispatch time:</label>
+        <select type="dropdown" id="dispatch">
+          <option>3am</option>
+          <option>4am</option>
+          <option>5am</option>
+          <option>6am</option>
+          <option>630am</option>
+          <option>645am</option>
+          <option>7am</option>
+          <option>730am</option>
+          <option selected>8am</option>
+          <option>830am</option>
+          <option>9am</option>
+          <option>930am</option>
+          <option>10am</option>
+          <option>1030am</option>
+          <option>11am</option>
+          <option>1130am</option>
+          <option>12pm</option>
+          <option value="12pmVariable">12pm (variable 2nd job)</option>
+        </select>
+      </div>
+      <!--  2nd column with same options for arrival?
+      **add user input option? -->
 
-      <!-- service includes -->
+      <!-- user input "Km round trip" **todo: integrate googlemaps iframe-->
+      <div>
+        <label for="travelDistance" id="travelDistance-label">Travel distance (round trip):</label>
+        <input id="travelDistance" placeholder="100 Km" required>
+      </div>
+      <!-- estimated travel time (round trip) -->
+      <div>
+        <label for="travelTime" id="travelTime-label">Estimated travel time (round trip):</label>
+        <input id="travelTime" placeholder="8" required>
+      </div>
+      <!-- calculate travel time bason on Km / add manual override option -->
+
+      <!-- dispatch point (charges start & end here) -->
+      <div>
+        <label for="dispPoint" id="dispPoint-label">Dispatch Point:</label>
+        <select type="dropdown" id="dispPoint">
+          <option>Guelph</option>
+          <option>KW</option>
+          <option>Cambridge</option>
+          <option>Flat rate</option>
+        </select>
+      </div>
+
+      <!-- min charge -->
+      <div>
+        <label for="minCharge" id="minCharge-label">Minimum charge:</label>
+        <select type="dropdown" id="minCharge">
+          <option>2 hours</option>
+          <option>3 hours</option>
+          <option>4 hours</option>
+          <option>Flat rate</option>
+        </select>
+      </div>
+
+      <!-- breaks/ time -->
+      <!-- 
+      set number & time?
+      perentage of total time? -->
+      
+      </br>
+      <!-- SERVICE INCLUDES -->
+
       <p>Service includes:</p>
       <!-- team -->
       <div>
         <label for="team" id="team-label">Team:</label>
         <select type="dropdown" id="team">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option selected value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
+          <option>1</option>
+          <option>2</option>
+          <option selected>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option">10</option>
+          <option">11</option>
+          <option">12</option>
         </select>
       </div>
 
@@ -69,15 +154,15 @@
       <div>
         <label for="truck" id="truck-label">Truck:</label>
         <select type="dropdown" id="truck">
-          <option value="1">1 cube van</option>
-          <option value="2">1 straight truck (24 ft)</option>
-          <option selected value="3">1 straight truck (26 ft)</option>
-          <option value="4">1 straight truck (28 ft)</option>
-          <option value="5">2 straight trucks</option>
-          <option value="6">3 straight trucks</option>
-          <option value="7">4 straight trucks</option>
-          <option value="8">1 tractor trailer (53 ft)</option>
-          <option value="9">2 tractor trailers</option>
+          <option value="1CV">1 cube van</option>
+          <option value="24ft">1 straight truck (24 ft)</option>
+          <option selected value="26ft">1 straight truck (26 ft)</option>
+          <option value="28ft">1 straight truck (28 ft)</option>
+          <option value="2ST">2 straight trucks</option>
+          <option value="3ST">3 straight trucks</option>
+          <option value="4ST">4 straight trucks</option>
+          <option value="1TT">1 tractor trailer (53 ft)</option>
+          <option value="2TT">2 tractor trailers</option>
         </select>
       </div>
 
@@ -135,43 +220,8 @@
         </div>
       </div>
 
-      <!-- dispatch time / expected arrival time -->
-      <!-- 
-      3am   /    2nd colum with same options for arrival?
-      4am
-      5am
-      6am
-      630am
-      645am
-      7am
-      730am
-      8am
-      830am
-      9am
-      930am
-      10am
-      1030am
-      11am
-      1130am
-      12pm
-      12pm (variable 2nd job)
-      **add user input option? -->
+      <!-- todo: FULL material list -->
 
-
-      <!-- estimated travel time (round trip) -->
-      <!-- user input "Km round trip" **todo: integrate googlemaps iframe-->
-
-      <!-- dispatch point (charges start & end here) -->
-      <!-- 
-      Guelph
-      KW
-      Cambridge
-      Flat rate -->
-
-      <!-- breaks/ time -->
-      <!-- 
-      set number & time?
-      perentage of total time? -->
 
 
       <!-- day 1 (rate * hours = line1) -->
