@@ -5,7 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MTM Estimate</title>
+
+    <style>
+      legend {
+        background-color: rgb(231,124,55);
+        color: #fff;
+        /* padding: 3px 6px; */
+        padding: 0.25em 0.5em;
+      }
+      /* green logo colour: RGB(17,117,54) */
+    </style>
 </head>
+
 <body>
     <!-- title -->
     <h1 id="title">Estimate of Moving Services - Mike The Mover</h1>
@@ -15,31 +26,40 @@
 
     </br>
 
-    <!-- form START -->
-    <form id="survey-form">
+    <!-- **FORM start** -->
+    <form id="survey-form" action="#">
 
       <!-- CLIENT INFO -->
 
-      <p>Client information:</p>
-      <!-- name -->
-      <div>
+      <fieldset>
+        <legend for="">Client information:</legend>
+        <!-- name -->
         <label for="name" id="name-label">Client name:</label>
-        <input id="name" placeholder="John Doe" required>
-      </div>
-      
-      <!-- number -->
-      <div>
+        <input id="name" placeholder="John Doe" required><br/>
+        
+        
+        <!-- number -->
         <label for="phone" id="phone-label">Phone number:</label>
-        <input type="number" id="phone" placeholder="555-123-4567" required>
-      </div>
-
-      <!-- company -->
-      <div>
-        <label for="company" id="company-label">Company:</label>
-        <input id="company" placeholder="N/A">
-      </div>
+        <input type="number" id="phone" placeholder="555-123-4567" required><br/>
       
-      </br>
+
+        <!-- company -->
+        <label for="company" id="company-label">Company:</label>
+        <input id="company" placeholder="N/A"><br/>
+      </fieldset><br/>
+
+      <!-- source -->
+      <fieldset>
+        <legend>Source:</legend>
+          <label for="MTM">MTM</label>
+          <input type="radio" id="MTM" name="Group 1" value="MTM"><br/>
+
+          <label for="MF">MF</label>
+          <input type="radio" id="MF" name="Group 1" value="MF"><br/>
+
+          <label for="NB">NB</label>
+          <input type="radio" id="NB" name="Group 1" value="NB"><br/>
+      </fieldset></br>
 
       <!-- todo: split this into two pages, start of mini-crm;
       popup or area for client info input ->  whole page tile view showing current
@@ -48,21 +68,21 @@
       <!-- LOGISTICS -->
 
       <!-- todo: additional pick-up & drop-off locations -->
-      <p>Logistics:</p>
+      <fieldset>
+        <legend>Logistics:</legend>
       <!-- origin -->
-      <div>
         <label for="origin" id="origin-label">Origin address:</label>
-        <input rows="5" cols="33" id="origin" placeholder="420 Gouda Place, Guelph ON">
-      </div>
-      
+        <input rows="5" cols="33" id="origin" placeholder="420 Gouda Place, Guelph ON"><br/>
+
       <!-- destination -->
-      <div>
         <label for="destination" id="destination-label">Destination address:</label>
-        <input rows="5" cols="33" id="destination" placeholder="69 Starview Cres, Guelph ON">
-      </div>
+        <input rows="5" cols="33" id="destination" placeholder="69 Starview Cres, Guelph ON"><br/>
+
+      <!-- move date -->
+        <label for="date" id="date-label">Move date:</label>
+        <input type="date" id="date" placeholder="June 20"><br/>
 
       <!-- dispatch time / expected arrival time -->
-      <div>
         <label for="dispatch" id="dispatch-label">Dispatch time:</label>
         <select type="dropdown" id="dispatch">
           <option>3am</option>
@@ -83,56 +103,50 @@
           <option>1130am</option>
           <option>12pm</option>
           <option value="12pmVariable">12pm (variable 2nd job)</option>
-        </select>
-      </div>
+        </select><br/>
+
       <!--  2nd column with same options for arrival?
       **add user input option? -->
 
       <!-- user input "Km round trip" **todo: integrate googlemaps iframe-->
-      <div>
         <label for="travelDistance" id="travelDistance-label">Travel distance (round trip):</label>
-        <input id="travelDistance" placeholder="100 Km" required>
-      </div>
+        <input id="travelDistance" placeholder="100 Km" required><br/>
+
       <!-- estimated travel time (round trip) -->
-      <div>
         <label for="travelTime" id="travelTime-label">Estimated travel time (round trip):</label>
-        <input id="travelTime" placeholder="8" required>
-      </div>
+        <input id="travelTime" placeholder="8" required><br/>
       <!-- calculate travel time bason on Km / add manual override option -->
 
       <!-- dispatch point (charges start & end here) -->
-      <div>
         <label for="dispPoint" id="dispPoint-label">Dispatch Point:</label>
         <select type="dropdown" id="dispPoint">
           <option>Guelph</option>
           <option>KW</option>
           <option>Cambridge</option>
           <option>Flat rate</option>
-        </select>
-      </div>
+        </select><br/>
 
       <!-- min charge -->
-      <div>
         <label for="minCharge" id="minCharge-label">Minimum charge:</label>
         <select type="dropdown" id="minCharge">
           <option>2 hours</option>
           <option>3 hours</option>
           <option>4 hours</option>
           <option>Flat rate</option>
-        </select>
-      </div>
+        </select><br/>
+    </fieldset><br/>
 
       <!-- breaks/ time -->
       <!-- 
       set number & time?
       perentage of total time? -->
       
-      </br>
+      
       <!-- SERVICE INCLUDES -->
 
-      <p>Service includes:</p>
       <!-- team -->
-      <div>
+      <fieldset>
+      <legend>Service includes:</legend>
         <label for="team" id="team-label">Team:</label>
         <select type="dropdown" id="team">
           <option>1</option>
@@ -147,11 +161,9 @@
           <option">10</option>
           <option">11</option>
           <option">12</option>
-        </select>
-      </div>
-
+        </select><br/>
+      
       <!-- truck -->
-      <div>
         <label for="truck" id="truck-label">Truck:</label>
         <select type="dropdown" id="truck">
           <option value="1CV">1 cube van</option>
@@ -163,11 +175,9 @@
           <option value="4ST">4 straight trucks</option>
           <option value="1TT">1 tractor trailer (53 ft)</option>
           <option value="2TT">2 tractor trailers</option>
-        </select>
-      </div>
+        </select><br/>
 
       <!-- rate -->
-      <div>
         <label for="rate" id="rate-label">Rate:</label>
         <select type="dropdown" id="rate">
           <option>70</option>
@@ -183,42 +193,34 @@
           <option>280</option>
           <option>290</option>
           <option>360</option>
-        </select>
-      </div>
+        </select><br/>
+      </fieldset></br>
 
       <!-- check boxes - equips -->
-      <div>
-        <p>Equipment:</p>
-        <div>
+      <fieldset>
+        <legend>Equipment:</legend>
           <label for="Standard equipment">Standard equipment</label>
-          <input type="checkbox" id="Standard equipment" name="Standard equipment" value="Standard equipment">
-        </div>
-        <div>
+          <input type="checkbox" id="Standard equipment" name="Standard equipment" value="Standard equipment"><br/>
+
           <label for="Piano equipment">Piano equipment</label>
-          <input type="checkbox" id="Piano equipment" name="Piano equipment" value="Piano equipment">
-        </div>
-        <div>
+          <input type="checkbox" id="Piano equipment" name="Piano equipment" value="Piano equipment"><br/>
+
           <label for="Power-mate stair climber">Power-mate stair climber</label>
-          <input type="checkbox" id="Power-mate stair climber" name="Power-mate stair climber" value="Power-mate stair climber">
-        </div>
-      </div>
+          <input type="checkbox" id="Power-mate stair climber" name="Power-mate stair climber" value="Power-mate stair climber"><br/>
+    </fieldset></br>
       
       <!-- check boxes - reusable material -->
-      <div>
-        <p>Reusable mats:</p>
-        <div>
+      <fieldset>
+        <legend>Reusable mats:</legend>
           <label for="Medium mirror carton">Medium mirror carton</label>
-          <input type="checkbox" id="Medium mirror carton" name="Medium mirror carton" value="Medium mirror carton">
-        </div>
-        <div>
+          <input type="checkbox" id="Medium mirror carton" name="Medium mirror carton" value="Medium mirror carton"><br/>
+
           <label for="Large mirror carton">Large mirror carton</label>
-          <input type="checkbox" id="Large mirror carton" name="Large mirror carton" value="Large mirror carton">
-        </div>
-        <div>
+          <input type="checkbox" id="Large mirror carton" name="Large mirror carton" value="Large mirror carton"><br/>
+
           <label for="Wardrobe cartons">Wardrobe cartons</label>
-          <input type="checkbox" id="Wardrobe cartons" name="Wardrobe cartons" value="Wardrobe cartons">
-        </div>
-      </div>
+          <input type="checkbox" id="Wardrobe cartons" name="Wardrobe cartons" value="Wardrobe cartons"><br/>
+      </fieldset></br>
 
       <!-- todo: FULL material list -->
 
@@ -244,12 +246,10 @@
 
       <!-- fineprint -->
 
-      </br>
-
-      <div>
-        <label for="textbox">Notes:</label></br>
-        <textarea placeholder="Example note.." id="textbox" name="textbox" rows="5" cols="33"></textarea>
-      </div>
+      <fieldset>
+        <legend>Notes:</legend>
+        <textarea placeholder="Example note.." id="notes" name="notes" rows="5" cols="33"></textarea>
+      </fieldset>
       
       <input type="submit" value="Send it" id="submit">
     </form>
